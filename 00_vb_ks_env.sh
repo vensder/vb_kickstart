@@ -55,9 +55,5 @@ url --url="http://mirror.yandex.ru/centos/7/os/x86_64/"
 %end
 END
 
-
 cp ~/.config/VirtualBox/TFTP/pxelinux.0 ~/.config/VirtualBox/TFTP/centos7.pxe
-
-
-cd ~/http && python -m SimpleHTTPServer
 
