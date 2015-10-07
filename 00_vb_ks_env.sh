@@ -19,7 +19,7 @@ DEFAULT centos7
 
 LABEL centos7
   KERNEL images/centos/7/vmlinuz
-  APPEND initrd=images/centos/7/initrd.img ks=http://192.168.122.1/kickstart/centos7-ks.cfg ip=dhcp ksdevice=eth0 ramdisk_size=10000 ipv6.disable=1 biosdevnames=0 net.ifnames=0 unsupported_hardware text
+  APPEND initrd=images/centos/7/initrd.img ks=http://192.168.122.1:8000/kickstart/centos7-ks.cfg ip=dhcp ksdevice=eth0 ramdisk_size=10000 ipv6.disable=1 biosdevnames=0 net.ifnames=0 unsupported_hardware text
 END
 
 mkdir -p ~/http/kickstart
@@ -58,4 +58,6 @@ END
 
 cp ~/.config/VirtualBox/TFTP/pxelinux.0 ~/.config/VirtualBox/TFTP/centos7.pxe
 
+
+cd ~/http && python -m SimpleHTTPServer
 
